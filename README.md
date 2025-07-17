@@ -33,3 +33,20 @@ uv run python main.py
 - 패키지 설치, 의존성 관리는 반드시 uv 명령어(`uv pip install ...`)를 사용하세요.
 - Streamlit, FastAPI 등 별도의 실행 명령이 필요한 경우 각 도구의 공식 실행 명령을 사용하면 됩니다.
 - 실행 중 에러가 발생하면 에러 메시지를 복사해서 질문해 주세요.
+
+---
+
+## 환경변수(.env) 관리
+
+- 민감한 정보(API 키, 비밀번호 등)는 `.env` 파일에 저장하고, 절대 git에 올리지 마세요.
+- `.env` 파일 예시:
+
+```
+UPBIT_ACCESS_KEY=여기에_업비트_액세스키
+UPBIT_SECRET_KEY=여기에_업비트_시크릿키
+OPENAI_API_KEY=여기에_openai_키
+```
+
+- 코드에서는 python-dotenv로 환경변수를 불러와 사용합니다.
+
+---
